@@ -24,15 +24,20 @@ We can use the Developer Tools provided in browsers to see all the HTTP requests
 
 ![Chrome Network Tab](images/networktab.png)
 
-+ HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development.
-    
-    GET www.google.co.in HTTP/1.1
+HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. Sending a simple get request in Postman generates the following HTTP code:
 
-+ HTTP is extensible, new HTTP headers can be easily created to support additional features. HTTP headers allow the client and the server to pass additional information with the request or the response. 
+    GET  HTTP/1.1
+    Host: www.google.co.in
+    Cache-Control: no-cache
+    Postman-Token: 59cb0dcb-d289-0280-1f98-a353cc46f0c3
 
-    [MDN Article: HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
-+ HTTP is stateless, i.e. two successive requests on the same connection are completely independent of each other. But there are many applications that need state maintenance across requests, such as adding items to  shopping carts on e-commerce websites. Adding each item sends a new request, but because HTTP is stateless, we can not remember which items have already been added to the cart. Header extensions allow us to store HTTP cookies in the browser, these cookies contain context related data and can be read and modified by the browser to maintain state across requests.
+
+HTTP is extensible, new HTTP headers can be easily created to support additional features. HTTP headers allow the client and the server to pass additional information with the request or the response. 
+
+[MDN Article: HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+
+HTTP is stateless, i.e. two successive requests on the same connection are completely independent of each other. But there are many applications that need state maintenance across requests, such as adding items to  shopping carts on e-commerce websites. Adding each item sends a new request, but because HTTP is stateless, we can not remember which items have already been added to the cart. Header extensions allow us to store HTTP cookies in the browser, these cookies contain context related data and can be read and modified by the browser to maintain state across requests.
 
 ## Hyper Text Markup Language
 
