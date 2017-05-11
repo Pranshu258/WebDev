@@ -92,6 +92,7 @@ The server keeps a record of ETags for the documents it serves. Browsers often c
             <p>Varnish cache server</p>
         </body>
     </html>
+    
 Notice that the server that sent the response is not the actual github server but varnish server. Varnish server is used to cache the documents on the server side and most of the times this server may itself send the response to the client. This heavily speeds up the fetching of content.
 In other cases, the main server may itself respond to the request instead of the varnish server if the varnish server is busy.
 
