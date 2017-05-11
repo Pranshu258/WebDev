@@ -92,13 +92,40 @@ The server keeps a record of ETags for the documents it serves. Browsers often c
             <p>Varnish cache server</p>
         </body>
     </html>
+Notice that the server that sent the response is not the actual github server but varnish server. Varnish server is used to cache the documents on the server side and most of the times this server may itself send the response to the client. This heavily speeds up the fetching of content.
+In other cases, the main server may itself respond to the request instead of the varnish server if the varnish server is busy.
 
+    HTTP/1.1 412 Precondition Failed
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    Access-Control-Allow-Origin: *
+    X-Github-Request-Id: 8CBE:6A18:1C90C4:25894B:5914E640
+    Content-Length: 182
+    Accept-Ranges: bytes
+    Date: Thu, 11 May 2017 22:31:29 GMT
+    Via: 1.1 varnish
+    Connection: close
+    X-Served-By: cache-ams4136-AMS
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1494541889.166829,VS0,VE97
+    Vary: Accept-Encoding
+    X-Fastly-Request-Id: 8434dc300a5a5ce479403e4a5c1b8d8f22242296
+    <html>
+        <head><title>412 Precondition Failed</title></head>
+        <body bgcolor="white">
+            <center><h1>412 Precondition Failed</h1></center>
+            <hr><center>nginx</center>
+        </body>
+    </html>
 
 HTTP is extensible, new HTTP headers can be easily created to support additional features. HTTP headers allow the client and the server to pass additional information with the request or the response.
 
 [MDN Article: HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
 HTTP is stateless, i.e. two successive requests on the same connection are completely independent of each other. But there are many applications that need state maintenance across requests, such as adding items to  shopping carts on e-commerce websites. Adding each item sends a new request, but because HTTP is stateless, we can not remember which items have already been added to the cart. Header extensions allow us to store HTTP cookies in the browser, these cookies contain context related data and can be read and modified by the browser to maintain state across requests.
+
+
 
 ## Hyper Text Markup Language
 
