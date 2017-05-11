@@ -13,7 +13,7 @@ The World Wide Web is an information sharing model built on top of the internet.
 Each document on the internet has an address which is required to locate it on the network, this address is called URL (Uniform Resource Locator).
 These documents can also have other associated resources such as videos, images etc. The language used to create these documents is called HTML.
 
-The World Wide Web is not synonymous to the internet, it is a part of the internet - a big part. Internet also contains other things like Email, FTP (File Transfer Protocol), DNS (Domain Name Service), TLS (Transport Layer Security) and other services, 
+The World Wide Web is not synonymous to the internet, it is a part of the internet - a big part. Internet also contains other things like Email, FTP (File Transfer Protocol), DNS (Domain Name Service), TLS (Transport Layer Security) and other services,
 
 [Wikipedia Article: WWW](https://en.wikipedia.org/wiki/World_Wide_Web)
 
@@ -24,16 +24,77 @@ We can use the Developer Tools provided in browsers to see all the HTTP requests
 
 ![Chrome Network Tab](images/networktab.png)
 
-HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. Sending a simple get request in Postman generates the following HTTP code:
+HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests.
 
-    GET  HTTP/1.1
-    Host: www.google.co.in
-    Cache-Control: no-cache
-    Postman-Token: 59cb0dcb-d289-0280-1f98-a353cc46f0c3
+    $ sudo npm install http-console2 -g
+    $ http-console http://pranshu258.github.io
+    > http-console 0.7.0
+    > Welcome, enter .help if you're lost.
+    > Connecting to pranshu258.github.io on port 80.
+    http://pranshu258.github.io:80/> GET /
+
+Here we have made a HTTP GET request for a webpage located at pranshu258.github.io, the response that we get from the server is as follows:
+
+    HTTP/1.1 200 OK
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    Last-Modified: Thu, 11 May 2017 14:52:49 GMT
+    Access-Control-Allow-Origin: *
+    Expires: Thu, 11 May 2017 21:51:34 GMT
+    Cache-Control: max-age=600
+    X-Github-Request-Id: F5B0:6A1A:AB9C3:E169E:5914DA8C
+    Content-Length: 17711
+    Accept-Ranges: bytes
+    Date: Thu, 11 May 2017 21:46:07 GMT
+    Via: 1.1 varnish
+    Age: 273
+    Connection: close
+    X-Served-By: cache-ams4122-AMS
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1494539167.138972,VS0,VE0
+    Vary: Accept-Encoding
+    X-Fastly-Request-Id: f350b745766fb29d77c71166a8f96782fe64648d
+    <!DOCTYPE html>... (17711 bytes of HTML content)
+
+We can also send headers in HTTP requests, for example the If-Match header. This header is used for cache validation with the help of ETag (Entity Tag). 
+
+    If-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+
+The server keeps a record of ETags for the documents it serves. Browsers often cache webpages to save bandwidth and show the cached data to user without actually fetching the page from the server. However, the document on the server might have been updated and the cache might no longer be valid. The browser can ensure the validity of the cached document by requesting the server for the document with the ETag of cached doc, if the server has the unmodified document then the ETag would match and it would respond with OK status which means the cache is valid. Otherwise, if the document has been modified, the ETag does not match and server responds as follows:
+
+    HTTP/1.1 412 Precondition Failed
+    Server: Varnish
+    Retry-After: 0
+    Content-Type: text/html; charset=utf-8
+    Content-Length: 451
+    Accept-Ranges: bytes
+    Date: Thu, 11 May 2017 21:51:08 GMT
+    Via: 1.1 varnish
+    Connection: close
+    X-Served-By: cache-ams4449-AMS
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1494539468.150815,VS0,VE1
+    X-Fastly-Request-Id: 2969b1af4849f11287d91f26ca90a720419517ce
+    <?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html>
+        <head>
+            <title>412 Precondition Failed</title>
+        </head>
+        <body>
+            <h1>Error 412 Precondition Failed</h1>
+            <p>Precondition Failed</p>
+            <h3>Guru Mediation:</h3>
+            <p>Details: cache-ams4151-AMS 1494539468 4042009446</p>
+            <hr>
+            <p>Varnish cache server</p>
+        </body>
+    </html>
 
 
-
-HTTP is extensible, new HTTP headers can be easily created to support additional features. HTTP headers allow the client and the server to pass additional information with the request or the response. 
+HTTP is extensible, new HTTP headers can be easily created to support additional features. HTTP headers allow the client and the server to pass additional information with the request or the response.
 
 [MDN Article: HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
