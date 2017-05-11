@@ -1,3 +1,5 @@
+[Previous: Contents](README.md)
+
 # Introduction to Web Development
 Pranshu Gupta
 
@@ -11,8 +13,4 @@ Pranshu Gupta
 
 ## Web Development
 
-### Static Websites
-
-### Dynamic Websites
-
-### Web Apps
+[Next: Github Pages](GitHub_Pages.md)
