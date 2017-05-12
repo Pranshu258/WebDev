@@ -297,4 +297,9 @@ We can have nested rows and columns as well, for example:
         <div class="col-sm-4">A Column of width 4</div>
     </div>
 
+For an exhaustive description of components provided by Bootstrap visit: 
+[Bootstrap Components](http://getbootstrap.com/components/).
+
+[Bootstrap Theme](http://getbootstrap.com/examples/theme/)
+
 [Next: Github Pages](GitHub_Pages.md)
