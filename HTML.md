@@ -170,7 +170,7 @@ We have seen how to style a particular paragraph and how to style all the paragr
             background-color:black;
             color:white;
             padding:2%;
-            margin: 1%;
+            margin: 0;
             border: 1px solid grey;
         }
 
@@ -180,19 +180,20 @@ We have seen how to style a particular paragraph and how to style all the paragr
             padding:2%;
             margin: 1%;
             border: 1px solid powderblue;
+            border-radius: 8px;
         }
     </style>
 
     <p class="styled_para_type1">Paragraph 1 Style 1</p>
-    <p class="styled_para_type1">Paragraph 2 Style 1</p>
     <p class="styled_para_type2">Paragraph Style 2</p>
+    <p class="styled_para_type1">Paragraph 2 Style 1</p>
 
 <style>
     .styled_para_type1 {
         background-color:black;
         color:white;
         padding:2%;
-        margin: 1%;
+        margin: 0;
         border: 1px solid grey;
     }
 
@@ -202,16 +203,28 @@ We have seen how to style a particular paragraph and how to style all the paragr
         padding:2%;
         margin: 1%;
         border: 1px solid powderblue;
+        border-radius: 8px;
     }
 </style>
 
 <p class="styled_para_type1">Paragraph 1 Style 1</p>
-<p class="styled_para_type1">Paragraph 2 Style 1</p>
 <p class="styled_para_type2">Paragraph Style 2</p>
+<p class="styled_para_type1">Paragraph 2 Style 1</p>
 
 Colors can be specified in CSS by using either their HEX Code or their RGB values. Google Color Picker is a handy tool to pick your favorite color. [Google Color Picker](https://www.google.co.in/search?q=Color+Picker)
 
 ![Google Color Picker](images/colorpicker.png)
+
+Google Fonts is a huge library of beatiful fonts that we can use to create visually pleasing content. For example to use the "Calligraffitti" font we use the following HTML markup.
+
+    <!-- Link the Font Stylesheet in head -->
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+    <!-- use the font in some content -->
+    <h1 style="font-family: 'Calligraffitti', cursive;text-align:center">This is awesome!!!</h1>
+
+<link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
+
+<h1 style="font-family:'Calligraffitti', cursive;text-align:center">This is awesome!!!</h1>
 
 
 
