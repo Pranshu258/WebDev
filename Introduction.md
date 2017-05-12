@@ -26,6 +26,8 @@ We can use the Developer Tools provided in browsers to see all the HTTP requests
 
 HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests.
 
+[Install NodeJS](https://nodejs.org/en/download/)
+
     $ sudo npm install http-console2 -g
     $ http-console http://pranshu258.github.io
     > http-console 0.7.0
@@ -126,11 +128,4 @@ HTTP is extensible, new HTTP headers can be easily created to support additional
 
 HTTP is stateless, i.e. two successive requests on the same connection are completely independent of each other. But there are many applications that need state maintenance across requests, such as adding items to  shopping carts on e-commerce websites. Adding each item sends a new request, but because HTTP is stateless, we can not remember which items have already been added to the cart. Header extensions allow us to store HTTP cookies in the browser, these cookies contain context related data and can be read and modified by the browser to maintain state across requests.
 
-
-
-## Hyper Text Markup Language
-
-
-## Web Development
-
-[Next: Github Pages](GitHub_Pages.md)
+[Next: Hyper Text Markup Language](HTML.md)
