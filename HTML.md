@@ -153,10 +153,66 @@ We can write CSS either inside the "head" tag or in a separate file, if we choos
     <!-- Linking the external CSS -->
     <link href="mystyles.css" rel="stylesheet">
 
+We can also specify styling for all paragraphs in the webpage in one go. (Similarly for other HTML tags as well).
+
+    p {
+        background-color:black;
+        color:white;
+        padding:2%;
+        margin: 1%;
+        border: 1px solid powderblue;
+    }
+
+We have seen how to style a particular paragraph and how to style all the paragraphs. What if we want to style some of the paragraphs in the page? In that case, we can utilize the "class" attribute of HTML tags. See the following HTML and CSS:
+
+    <style>
+        .styled_para_type1 {
+            background-color:black;
+            color:white;
+            padding:2%;
+            margin: 1%;
+            border: 1px solid grey;
+        }
+
+        .styled_para_type2 {
+            background-color:darkblue;
+            color:white;
+            padding:2%;
+            margin: 1%;
+            border: 1px solid powderblue;
+        }
+    </style>
+
+    <p class="styled_para_type1">Paragraph 1 Style 1</p>
+    <p class="styled_para_type1">Paragraph 2 Style 1</p>
+    <p class="styled_para_type2">Paragraph Style 2</p>
+
+<style>
+    .styled_para_type1 {
+        background-color:black;
+        color:white;
+        padding:2%;
+        margin: 1%;
+        border: 1px solid grey;
+    }
+
+    .styled_para_type2 {
+        background-color:darkblue;
+        color:white;
+        padding:2%;
+        margin: 1%;
+        border: 1px solid powderblue;
+    }
+</style>
+
+<p class="styled_para_type1">Paragraph 1 Style 1</p>
+<p class="styled_para_type1">Paragraph 2 Style 1</p>
+<p class="styled_para_type2">Paragraph Style 2</p>
+
 Colors can be specified in CSS by using either their HEX Code or their RGB values. Google Color Picker is a handy tool to pick your favorite color. [Google Color Picker](https://www.google.co.in/search?q=Color+Picker)
 
-
-
 ![Google Color Picker](images/colorpicker.png)
+
+
 
 [Next: Github Pages](GitHub_Pages.md)
