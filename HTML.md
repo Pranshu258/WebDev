@@ -92,6 +92,39 @@ The "img" tag has several other attributes such as "alt" which is used to specif
 
 Similarly, "a" tag also has other attributes e.g. "target", if we set the value of target attribute to "_blank", then the linked page will open in a new tab in the browser. Otherwise, on clicking the hyperlink, the webpage opens in the same tab, thus we lose the current webpage. 
 
+## Cascading Style Sheets
+The style attribute in HTML tags can be used to add styling to the content. However, with larger documents this becomes messy, CSS comes to rescue in that case. We can attach identifiers to different content in the webpage using the "id" attribute and then using the identifier we can define styling for the corresponding content, in a separate file. CSS is the language in which we write stylesheets. 
 
+    <p style="background-color:black;color:white;padding:2%">Hello World</p>
+
+<p style="background-color:black;color:white;padding:2%"> Hello World </p>
+
+To do the same thing in CSS we write the HTML as follows:
+
+    <p id="my_para">Hello World</p>
+
+and the required CSS is (can be written in a separate file):
+
+    #my_para {
+        background-color:black;
+        color:white;
+        padding:2%
+    }
+
+We can write CSS either inside the "head" tag or in a separate file, if we choose to write it in a file (say "mystyles.css") we will need to somehow link it to the HTML. 
+
+    <!-- CSS inside head tag -->
+    <head>
+        <style>
+            #my_para {
+                background-color:black;
+                color:white;
+                padding:2%
+            }
+        </style>
+    </head>
+
+    <!-- Linking the external CSS -->
+    <link href="mystyles.css" rel="stylesheet">
 
 [Next: Github Pages](GitHub_Pages.md)
