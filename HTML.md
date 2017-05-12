@@ -52,6 +52,19 @@ We have six heading tags h1, h2, h3, h4, h5 and h6 in decreasing order of font s
 
     <p>This is a paragraph. This is a paragraph. ...</p>
 
+We can format text in HTML using tags like "b", "i" (bold, italics respectively) as shown in the following example:
+
+<b>Bold</b> 
+<strong>Strong</strong>
+<i>Italics</i>
+<em>Emphasize</em> 
+<mark>Mark</mark>
+<small>Small</small>
+<del>Deleted</del>
+<ins>Inserted</ins>
+<sub>Subscript</sub>
+<sup>Superscript</sup>
+
 Lists can be described using the "ul", "ol" and "li" tags. The "ul" tag is used for unordered lists while the "ol" tag is used for ordered lists. The "li" specifies individual items in the list.
 
     <ul>
@@ -91,6 +104,8 @@ For images and hyperlinks we use the "img" and "a" tags. The location of image f
 The "img" tag has several other attributes such as "alt" which is used to specify the alternative text which should be shown if the image fails to load in the browser. Attributes "width" and "height" can be used to specify the display size of the image.
 
 Similarly, "a" tag also has other attributes e.g. "target", if we set the value of target attribute to "_blank", then the linked page will open in a new tab in the browser. Otherwise, on clicking the hyperlink, the webpage opens in the same tab, thus we lose the current webpage. 
+
+
 
 ## Cascading Style Sheets
 The style attribute in HTML tags can be used to add styling to the content. However, with larger documents this becomes messy, CSS comes to rescue in that case. We can attach identifiers to different content in the webpage using the "id" attribute and then using the identifier we can define styling for the corresponding content, in a separate file. CSS is the language in which we write stylesheets. 
