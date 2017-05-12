@@ -275,7 +275,7 @@ To include Bootstrap in a webpage, we can either download the files and include 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-One of the most important features of Bootstrap is the grid layout. We can define the layout of a webpage in terms of "rows" and "columns" of different sizes using the "div" tag.
+One of the most important features of Bootstrap is the grid layout. We can define the layout of a webpage in terms of "rows" and "columns" of different sizes using the "div" tag and "row" and "col-" classes of bootstrap.
 
     <div class="row">
         <!-- The width of the row is defined as 12 -->
@@ -298,8 +298,6 @@ We can have nested rows and columns as well, for example:
     </div>
 
 For an exhaustive description of components provided by Bootstrap visit: 
-[Bootstrap Components](http://getbootstrap.com/components/).
-
-[Bootstrap Theme](http://getbootstrap.com/examples/theme/)
+[Bootstrap Components](http://getbootstrap.com/components/). You may also see an example theme [here](http://getbootstrap.com/examples/theme/)
 
 [Next: Github Pages](GitHub_Pages.md)
