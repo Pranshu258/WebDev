@@ -264,5 +264,37 @@ Google Fonts is a huge library of beatiful fonts that we can use to create visua
 
 <h1 style="font-family:'Calligraffitti', cursive;text-align:center">This is awesome!!!</h1>
 
+## Twitter Bootstrap
+Bootstrap is a free and open-source front-end web framework for designing responsive, mobile first websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.
+
+To include Bootstrap in a webpage, we can either download the files and include them directly or we can rely on a CDN (Content Delivery Network) for the same. 
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+One of the most important features of Bootstrap is the grid layout. We can define the layout of a webpage in terms of "rows" and "columns" of different sizes using the "div" tag.
+
+    <div class="row">
+        <!-- The width of the row is defined as 12 -->
+        <div class="col-sm-8">A Column of width 8</div>
+        <div class="col-sm-4">A Column of width 4</div>
+    </div>
+
+We can have nested rows and columns as well, for example:
+
+    <div class="row">
+        <!-- The width of the row is defined as 12 -->
+        <div class="col-sm-8">
+            <div class="row">
+                <!-- The width of the row is defined as 12 -->
+                <div class="col-sm-6">A Column of width 8</div>
+                <div class="col-sm-6">A Column of width 4</div>
+            </div>
+        </div>
+        <div class="col-sm-4">A Column of width 4</div>
+    </div>
 
 [Next: Github Pages](GitHub_Pages.md)
