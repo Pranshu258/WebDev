@@ -41,6 +41,13 @@ Inside the body tag we describe the content of the page using the tags for headi
 
     <h1>Heading</h1>
 
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+<h5>Heading</h5>
+<h6>Heading</h6>
+
 We have six heading tags h1, h2, h3, h4, h5 and h6 in decreasing order of font size. 
 
     <p>This is a paragraph. This is a paragraph. ...</p>
@@ -54,6 +61,13 @@ Lists can be described using the "ul", "ol" and "li" tags. The "ul" tag is used 
         <li>Item 4</li>
     </ul>
 
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+
     <ol>
         <li>Item 1</li>
         <li>Item 2</li>
@@ -61,7 +75,14 @@ Lists can be described using the "ul", "ol" and "li" tags. The "ul" tag is used 
         <li>Item 4</li>
     </ol>
 
-For images and hyperlinks we use the "img" and "a" tags. The location of image file is specified by the "src" attribute of the imag tag. The "href" attribute of "a" tag specifies the URL of the page that is linked to by the hyperink.
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ol>
+
+For images and hyperlinks we use the "img" and "a" tags. The location of image file is specified by the "src" attribute of the "img" tag. The "href" attribute of "a" tag specifies the URL of the page that is linked to by the hyperlink.
 
     <img src="location of image file"/>
 
@@ -70,5 +91,7 @@ For images and hyperlinks we use the "img" and "a" tags. The location of image f
 The "img" tag has several other attributes such as "alt" which is used to specify the alternative text which should be shown if the image fails to load in the browser. Attributes "width" and "height" can be used to specify the display size of the image.
 
 Similarly, "a" tag also has other attributes e.g. "target", if we set the value of target attribute to "_blank", then the linked page will open in a new tab in the browser. Otherwise, on clicking the hyperlink, the webpage opens in the same tab, thus we lose the current webpage. 
+
+
 
 [Next: Github Pages](GitHub_Pages.md)
