@@ -106,6 +106,44 @@ Lists can be described using the "ul", "ol" and "li" tags. The "ul" tag is used 
     <li>Item 4</li>
 </ol>
 
+We can also create tables in HTML. Following is an example:
+
+    <table style="width:100%;text-align:left">
+    <tr>
+        <th>Country</th>
+        <th>Capital</th> 
+        <th>Leader</th>
+    </tr>
+    <tr>
+        <td>India</td>
+        <td>New delhi</td> 
+        <td>Narendra Modi</td>
+    </tr>
+    <tr>
+        <td>USA</td>
+        <td>Washington DC</td> 
+        <td>Donald Trump</td>
+    </tr>
+    </table>
+
+<table style="width:100%;text-align:left">
+<tr>
+    <th>Country</th>
+    <th>Capital</th> 
+    <th>Leader</th>
+</tr>
+<tr>
+    <td>India</td>
+    <td>New delhi</td> 
+    <td>Narendra Modi</td>
+</tr>
+<tr>
+    <td>USA</td>
+    <td>Washington DC</td> 
+    <td>Donald Trump</td>
+</tr>
+</table>
+
 For images and hyperlinks we use the "img" and "a" tags. The location of image file is specified by the "src" attribute of the "img" tag. The "href" attribute of "a" tag specifies the URL of the page that is linked to by the hyperlink.
 
     <img src="location of image file"/>
@@ -225,7 +263,6 @@ Google Fonts is a huge library of beatiful fonts that we can use to create visua
 <link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet">
 
 <h1 style="font-family:'Calligraffitti', cursive;text-align:center">This is awesome!!!</h1>
-
 
 
 [Next: Github Pages](GitHub_Pages.md)
