@@ -290,12 +290,15 @@ We can have nested rows and columns as well, for example:
         <div class="col-sm-8">
             <div class="row">
                 <!-- The width of the row is defined as 12 -->
-                <div class="col-sm-6">A Column of width 8</div>
-                <div class="col-sm-6">A Column of width 4</div>
+                <div class="col-sm-6">A Column of width 6</div>
+                <div class="col-sm-6">A Column of width 6</div>
             </div>
         </div>
         <div class="col-sm-4">A Column of width 4</div>
     </div>
+
+![An Example Page](images/bootstrap.png)
+[See the page live](examples/bootstrap.html)
 
 For an exhaustive description of components provided by Bootstrap visit: 
 [Bootstrap Components](http://getbootstrap.com/components/). You may also see an example theme [here](http://getbootstrap.com/examples/theme/)
