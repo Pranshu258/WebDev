@@ -20,6 +20,9 @@ The general outline of any HTML page is as follows:
     </html>
 
 ## HTML Tags & Attributes
+
+    <tagName attributeName="attributeValue"> text content </tagname>
+
 All the components of a web page, such as headings, paragraphs, images, hyperlinks etc. are described by a corresponding HTML tag. Each HTML document is enclosed with in the "html" tag. This tag contains two tags "head" and "body". The head tag can contain more tags that describe important information like the title, author, serach keywords, icon etc. of the page. 
 
     <title>Page Title</title>
@@ -150,6 +153,7 @@ The "img" tag has several other attributes such as "alt" which is used to specif
 
 Similarly, "a" tag also has other attributes e.g. "target", if we set the value of target attribute to "_blank", then the linked page will open in a new tab in the browser. Otherwise, on clicking the hyperlink, the webpage opens in the same tab, thus we lose the current webpage. 
 
+[MDN: HTML Basics Tutorials](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
 
 ## Cascading Style Sheets
@@ -272,6 +276,8 @@ To include Bootstrap in a webpage, we can either download the files and include 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 One of the most important features of Bootstrap is the grid layout. We can define the layout of a webpage in terms of "rows" and "columns" of different sizes using the "div" tag and "row" and "col-" classes of bootstrap.
+
+The HTML "div" tag is the generic container for flow content and does not inherently represent anything. It is used to group elements for purposes such as styling (using the class or id attributes), marking a section of a document in a different language (using the lang attribute), and so on. 
 
     <div class="row">
         <!-- The width of the row is defined as 12 -->
