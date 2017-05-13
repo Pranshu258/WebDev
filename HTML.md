@@ -19,6 +19,9 @@ The general outline of any HTML page is as follows:
         </body>
     </html>
 
+To create, edit and test webpages we will need a text editor and a browser. I will use [Google Chrome]() in this tutorial. I mostly use either [VS Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/) as the text editor for my projects. 
+
+
 ## HTML Tags & Attributes
 
     <tagName attributeName="attributeValue"> text content </tagname>
@@ -152,9 +155,6 @@ For images and hyperlinks we use the "img" and "a" tags. The location of image f
 The "img" tag has several other attributes such as "alt" which is used to specify the alternative text which should be shown if the image fails to load in the browser. Attributes "width" and "height" can be used to specify the display size of the image.
 
 Similarly, "a" tag also has other attributes e.g. "target", if we set the value of target attribute to "_blank", then the linked page will open in a new tab in the browser. Otherwise, on clicking the hyperlink, the webpage opens in the same tab, thus we lose the current webpage. 
-
-[MDN: HTML Basics Tutorials](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-
 
 ## Cascading Style Sheets
 The style attribute in HTML tags can be used to add styling to the content. However, with larger documents this becomes messy, CSS comes to rescue in that case. We can attach identifiers to different content in the webpage using the "id" attribute and then using the identifier we can define styling for the corresponding content, in a separate file. CSS is the language in which we write stylesheets. 
@@ -307,4 +307,4 @@ For an exhaustive description of components provided by Bootstrap visit:
 
 For inspiration in web design visit [Awwwards](https://www.awwwards.com/)
 
-[Next: Github Pages](GitHub_Pages.md)
+[Next: Github Pages]()

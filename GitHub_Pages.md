@@ -1,4 +1,4 @@
-[Previous: Introduction](Introduction.md)
+[Previous: Introduction](HTML.md)
 
 # GitHub Pages
 Pranshu Gupta
@@ -7,4 +7,4 @@ Pranshu Gupta
 
 ## GitHub Pages
 
-[Next: JavaScript](JavaScript.md)
+[Next: JavaScript]()
