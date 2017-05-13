@@ -24,7 +24,11 @@ Here is a great introductory video of GitHub on YouTube, created by the GitHub t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" frameborder="0" allowfullscreen></iframe>
 
+
 We can also use to publish our websites via GitHub. Creating a repository named "yourusername.github.io" is all it takes. We add a HTML file "index.html" as the home page along with other pages as per our requirements. We make changes to website, commit the changes and push them to the remote which makes the changes visible on the actual website.
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
 
 [GitHub Pages](https://pages.github.com/)
 
