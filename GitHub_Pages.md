@@ -1,4 +1,4 @@
-[Previous: Introduction](HTML.md)
+[Previous: Hyper Text Markup Language](HTML.md)
 
 # GitHub Pages
 Pranshu Gupta
