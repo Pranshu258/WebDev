@@ -19,7 +19,7 @@ The general outline of any HTML page is as follows:
         </body>
     </html>
 
-To create, edit and test webpages we will need a text editor and a browser. I will use [Google Chrome]() in this tutorial. I mostly use either [VS Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/) as the text editor for my projects. 
+To create, edit and test webpages we will need a text editor and a browser. I mostly use [Google Chrome](https://www.google.com/chrome/) and [Firefox](https://www.mozilla.org/en-US/firefox/new/). [VS Code](https://code.visualstudio.com/) and [Sublime Text](https://www.sublimetext.com/) are great text editors available for free. 
 
 
 ## HTML Tags & Attributes
@@ -307,4 +307,4 @@ For an exhaustive description of components provided by Bootstrap visit:
 
 For inspiration in web design visit [Awwwards](https://www.awwwards.com/)
 
-[Next: Github Pages]()
+<!--[Next: Github Pages](GitHub_Pages.md)-->
