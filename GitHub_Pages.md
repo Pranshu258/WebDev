@@ -4,17 +4,35 @@
 Pranshu Gupta
 
 ## Git: A Version Control System
-Git is a version control system used to track changes in files and coordinating work on those files among multiple people. It is built for speed, data integrity, and support for distributed, non-linear workflows. 
+Git is a version control system used to track changes in files and coordinating work on those files among multiple people. It is built for speed, data integrity, and support for distributed, non-linear workflows. To add a project to git, go to the project folder and e issue the `git init` command. Then, add the files which you want to track with Git `git add fileName`, if you want to add all the files in the project folder use command `git add .`
+
+    $ cd projectFolder
+    $ git init
+    $ git add .
 
 In order to keep track of the changes made, every time a developer modifies the project, he commits the changes and adds a descriptive message to the commit. If something is not right, the changes can be reverted by going back to a previous commit. 
 
-A repository can have many branches, which may or may not be later merged with the development branch. This is useful in testing new ideas and features for the project, if a developer has some idea for a functionality to be added, he can create a new branch a write code and test the new feature. If all works well, this branch can be merged with the main branch.
+    $ git add changedFileName
+    $ git commit -m "descritive message"
 
-Each developer works on his/her local copy of the project and changes are copied from the local to the relese branch by a process called merging. Merging may involve conflict resolution as well. Conflicts arise when two developers make diferent changes to the same line of code, then we have to decide which one to keep and which one to discard. 
+A repository can have many branches, which may or may not be later merged with the development branch. This is useful in testing new ideas and features for the project, if a developer has some idea for a functionality to be added, he can create a new branch a write code and test the new feature. If all works well, this branch can be merged with the main branch. To create a new branch of code and start working in that branch use the following commands:
 
-Git is available freely under the GNU General Public License for Windows, Linux and MacOS. See the follwing article to learn how to install Git on our machine: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+    $ git branch newBranchName
+    $ git checkout newBranchName
 
-Please see the document in the following link to learn about important Git commands: [Git CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
+To go to work in the old branch, simply enter `git checkout oldBranchName`. For merging the current branch with another branch, use the following command, you might have resolve conflicts if you make different changes in the same line of code on the two branches. Conflict resolution has to be done manually by inspecting the code.
+
+    $ git merge currentBranchName otherBranchName
+
+Git is available freely under the GNU General Public License for Windows, Linux and MacOS. See the follwing article to learn how to install Git on your machine: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Ubuntu Linux and Windows 10 with Bash the following commands work:
+
+    $ sudo apt install git
+    $ git config --global user.name "your name"
+    $ git config --global user.email "your email"
+
+[Git CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
+
+### SSH Keys
 
 
 ## GitHub Pages
@@ -22,13 +40,13 @@ GitHub is an online service which is built on top of Git. It allows teams of dev
 
 Here is a great introductory video of GitHub on YouTube, created by the GitHub team.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" style="margin:2%" src="https://www.youtube.com/embed/w3jLJU7DT5E" frameborder="0" allowfullscreen></iframe>
 
 
 We can also use to publish our websites via GitHub. Creating a repository named "yourusername.github.io" is all it takes. We add a HTML file "index.html" as the home page along with other pages as per our requirements. We make changes to website, commit the changes and push them to the remote which makes the changes visible on the actual website.
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" style="margin:2%"  src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
 
 [GitHub Pages](https://pages.github.com/)
 
