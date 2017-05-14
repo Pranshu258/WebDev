@@ -32,9 +32,6 @@ Git is available freely under the GNU General Public License for Windows, Linux 
 
 [Git CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
 
-### SSH Keys
-
-
 ## GitHub Pages
 GitHub is an online service which is built on top of Git. It allows teams of developers to work on the same project together, making their own changes in the repository and merging them time to time to a main release branch in a collaborative way. It is a great tool for Open Source Projects which are developed by thousands of developers from all over the world, e.g., Linux Kernel.
 
@@ -42,9 +39,7 @@ Here is a great introductory video of GitHub on YouTube, created by the GitHub t
 
 <iframe width="560" height="315" style="margin-top:2%;margin-bottom:2%;" src="https://www.youtube.com/embed/w3jLJU7DT5E" frameborder="0" allowfullscreen></iframe>
 
-
 We can also use to publish our websites via GitHub. Creating a repository named "yourusername.github.io" is all it takes. We add a HTML file "index.html" as the home page along with other pages as per our requirements. We make changes to website, commit the changes and push them to the remote which makes the changes visible on the actual website.
-
 
 <iframe width="560" height="315" style="margin-top:2%;margin-bottom:2%;"  src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
 
