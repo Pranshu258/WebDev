@@ -47,7 +47,7 @@ Let's connect to a HTTP website and make a HTTP GET request:
     $ http-console http://getbootstrap.com
     > http-console 0.7.0                                                                                                > Welcome, enter .help if you're lost.                                                                              > Connecting to getbootstrap.com on port 80.                                                                        http://getbootstrap.com:80/> GET /
 
-Here we have made a HTTP GET request for a webpage located at pranshu258.github.io, the response that we get from the server is as follows:
+Here we have made a HTTP GET request for a webpage located at getbootstrap.com, the response that we get from the server is as follows:
 
     HTTP/1.1 200 OK
     Set-Cookie: __cfduid=d68b830a749f31db8f5e92d79810fc6331494847411; expires=Tue, 15-May-18 11:23:31 GMT; path=/; domain=.getbootstrap.com; HttpOnly
