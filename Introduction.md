@@ -32,12 +32,18 @@ This image shows the request and response headers when fetching a script for htt
 
 HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests.
 
-[Install NodeJS](https://nodejs.org/en/download/)
+[Install NodeJS](https://nodejs.org/en/download/). For Ubuntu following commands will work:
 
     $ sudo apt install nodejs
     $ sudo apt install npm
     $ sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+Now that we have installed NodeJS, we will go ahead and install the HTTP console package for node
+
     $ sudo npm install http-console2 -g
+
+Let's connect to a HTTP website and make a HTTP GET request:
+
     $ http-console http://getbootstrap.com
     > http-console 0.7.0                                                                                                > Welcome, enter .help if you're lost.                                                                              > Connecting to getbootstrap.com on port 80.                                                                        http://getbootstrap.com:80/> GET /
 
