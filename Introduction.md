@@ -20,9 +20,15 @@ The World Wide Web is not synonymous to the internet, it is a part of the intern
 ## Hyper Text Transfer Protocol
 HTTP is a protocol which allows the fetching of resources such as HTML documents over the internet. In a typical scenario, the web browser acts as the user-agent and sends requests for a HTML document hosted by some server. The server is a computer connected to the internet which handles the request and sends a response to the user-agent. The browser then parses this response and generates the view for the user. This may involve further requests to fetch images and other multimedia files embedded in the document.
 
-We can use the Developer Tools provided in browsers to see all the HTTP requests that were made by the browser when we visit some website. To open developer tools in Google Chrome press Ctrl+Shift+J. The following image shows the requests made when fetching the page at https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+We can use the Developer Tools provided in browsers to see all the HTTP requests that were made by the browser when we visit some website. To open developer tools in Google Chrome press Ctrl+Shift+J. The requests are shown in the network tab of the developer tools. Click on one the requests to see more details like headers etc. 
+
+The following image shows the requests made when fetching the page at https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview.
 
 ![Chrome Network Tab](images/networktab.png)
+
+This image shows the request and response headers when fetching a script for http://www.sony.co.in/
+
+![Request Headers in Network Tab](images/headers.png)
 
 HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests.
 
