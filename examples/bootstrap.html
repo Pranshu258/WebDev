@@ -2,23 +2,30 @@
 <html>
     <head>
         <title>Bootstrap Grid System</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Include the Bootstrap CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!--Include the Bootstrap JS-->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
         <style>
+            /*style for all div elements*/
             div {
                 padding: 10px;
                 border: 2px solid black;
             }
+            /*style for body element
+            there is only one body and one head in any HTML page*/
             body {
                 text-align: center;
             }
         </style>
     </head>
-    <body class="container">
-        <br>BODY<br><br>
-        <div class="row">
+    <body class="container"> <!--enclosing the body inside bootstrap constainer class-->
+        <br> <!-- new line -->
+        <h1>BODY</h1> <!-- heading -->
+        <br><br>
+        <div class="row"> <!-- A Bootstrap Row-->
             <br>ROW<br><br>
-            <div class="col-sm-8">
+            <div class="col-sm-8"> <!-- A Bootstrap Column -->
                 <br>WIDTH 8 COLUMN<br><br>
                 <div class="row">
                     <br>ROW<br><br>
@@ -30,11 +37,14 @@
             <div class="col-sm-4">
                 <br><br><br><br><br>
                 WIDTH 4 COLUMN
+                <!--this is an image of width and height both 100 pixels with a title that appears on hover the mouse over it-->
+                <img src="../images/colorpicker.png" width="100px" height="100px" title="colorpicker"/> 
                 <br><br><br><br><br>
             </div>
         </div>
         <br><br><br>
         <div class="row">
+            <a href="https://www.google.co.in"> Google </a> <!-- a link -->
             ROW
         </div>
         <br><br><br>
