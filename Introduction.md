@@ -29,35 +29,27 @@ HTTP is simple, HTTP messages can be read and understood by humans. This allows 
 [Install NodeJS](https://nodejs.org/en/download/)
 
     $ sudo npm install http-console2 -g
-    $ http-console http://pranshu258.github.io
-    > http-console 0.7.0
-    > Welcome, enter .help if you're lost.
-    > Connecting to pranshu258.github.io on port 80.
-    http://pranshu258.github.io:80/> GET /
+    $ http-console http://getbootstrap.com
+    > http-console 0.7.0                                                                                                > Welcome, enter .help if you're lost.                                                                              > Connecting to getbootstrap.com on port 80.                                                                        http://getbootstrap.com:80/> GET /
 
 Here we have made a HTTP GET request for a webpage located at pranshu258.github.io, the response that we get from the server is as follows:
 
     HTTP/1.1 200 OK
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    Last-Modified: Thu, 11 May 2017 14:52:49 GMT
+    Set-Cookie: __cfduid=d68b830a749f31db8f5e92d79810fc6331494847411; expires=Tue, 15-May-18 11:23:31 GMT; path=/; domain=.getbootstrap.com; HttpOnly
     Access-Control-Allow-Origin: *
-    Expires: Thu, 11 May 2017 21:51:34 GMT
+    Expires: Mon, 15 May 2017 11:33:32 GMT
     Cache-Control: max-age=600
-    X-Github-Request-Id: F5B0:6A1A:AB9C3:E169E:5914DA8C
-    Content-Length: 17711
-    Accept-Ranges: bytes
-    Date: Thu, 11 May 2017 21:46:07 GMT
-    Via: 1.1 varnish
-    Age: 273
+    Content-Encoding: gzip
+    X-Github-Request-Id: 59E5:7AF6:8E9940:B30D9E:5914630D
+    Server: cloudflare-nginx
+    Cf-Ray: 35d562b0e0a3704a-SIN
+    Content-Length: 3156
+    Content-Type: text/html; charset=utf-8
+    Last-Modified: Wed, 19 Oct 2016 15:43:42 GMT
     Connection: close
-    X-Served-By: cache-ams4122-AMS
-    X-Cache: HIT
-    X-Cache-Hits: 1
-    X-Timer: S1494539167.138972,VS0,VE0
-    Vary: Accept-Encoding
-    X-Fastly-Request-Id: f350b745766fb29d77c71166a8f96782fe64648d
-    <!DOCTYPE html>... (17711 bytes of HTML content)
+
+    HTML Content Here....
+
 
 We can also send headers in HTTP requests, for example the If-Match header. This header is used for cache validation with the help of ETag (Entity Tag). 
 
@@ -66,56 +58,21 @@ We can also send headers in HTTP requests, for example the If-Match header. This
 The server keeps a record of ETags for the documents it serves. Browsers often cache webpages to save bandwidth and show the cached data to user without actually fetching the page from the server. However, the document on the server might have been updated and the cache might no longer be valid. The browser can ensure the validity of the cached document by requesting the server for the document with the ETag of cached doc, if the server has the unmodified document then the ETag would match and it would respond with OK status which means the cache is valid. Otherwise, if the document has been modified, the ETag does not match and server responds as follows:
 
     HTTP/1.1 412 Precondition Failed
-    Server: Varnish
-    Retry-After: 0
+    Date: Mon, 15 May 2017 11:22:48 GMT
+    Set-Cookie: __cfduid=dd50695f1acc3791c87fcb1b9c06acb3c1494847368; expires=Tue, 15-May-18 11:22:48 GMT; path=/; domain=.getbootstrap.com; HttpOnly
+    Access-Control-Allow-Origin: *
+    X-Github-Request-Id: 7462:7C91:199C016:1FFBBBF:59198F88
+    Server: cloudflare-nginx
+    Cf-Ray: 35f5b8b2e5b331f8-SIN
+    Content-Length: 182
     Content-Type: text/html; charset=utf-8
-    Content-Length: 451
-    Accept-Ranges: bytes
-    Date: Thu, 11 May 2017 21:51:08 GMT
-    Via: 1.1 varnish
     Connection: close
-    X-Served-By: cache-ams4449-AMS
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1494539468.150815,VS0,VE1
-    X-Fastly-Request-Id: 2969b1af4849f11287d91f26ca90a720419517ce
-    <?xml version="1.0" encoding="utf-8"?>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
     <html>
         <head>
             <title>412 Precondition Failed</title>
         </head>
-        <body>
-            <h1>Error 412 Precondition Failed</h1>
-            <p>Precondition Failed</p>
-            <h3>Guru Mediation:</h3>
-            <p>Details: cache-ams4151-AMS 1494539468 4042009446</p>
-            <hr>
-            <p>Varnish cache server</p>
-        </body>
-    </html>
-    
-Notice that the server that sent the response is not the actual github server but varnish server. Varnish server is used to cache the documents on the server side and most of the times this server may itself send the response to the client. This heavily speeds up the fetching of content.
-In other cases, the main server may itself respond to the request instead of the varnish server if the varnish server is busy.
-
-    HTTP/1.1 412 Precondition Failed
-    Server: GitHub.com
-    Content-Type: text/html; charset=utf-8
-    Access-Control-Allow-Origin: *
-    X-Github-Request-Id: 8CBE:6A18:1C90C4:25894B:5914E640
-    Content-Length: 182
-    Accept-Ranges: bytes
-    Date: Thu, 11 May 2017 22:31:29 GMT
-    Via: 1.1 varnish
-    Connection: close
-    X-Served-By: cache-ams4136-AMS
-    X-Cache: MISS
-    X-Cache-Hits: 0
-    X-Timer: S1494541889.166829,VS0,VE97
-    Vary: Accept-Encoding
-    X-Fastly-Request-Id: 8434dc300a5a5ce479403e4a5c1b8d8f22242296
-    <html>
-        <head><title>412 Precondition Failed</title></head>
         <body bgcolor="white">
             <center><h1>412 Precondition Failed</h1></center>
             <hr><center>nginx</center>
