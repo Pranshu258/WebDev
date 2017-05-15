@@ -28,6 +28,9 @@ HTTP is simple, HTTP messages can be read and understood by humans. This allows 
 
 [Install NodeJS](https://nodejs.org/en/download/)
 
+    $ sudo apt install nodejs
+    $ sudo apt install npm
+    $ sudo ln -s /usr/bin/nodejs /usr/bin/node
     $ sudo npm install http-console2 -g
     $ http-console http://getbootstrap.com
     > http-console 0.7.0                                                                                                > Welcome, enter .help if you're lost.                                                                              > Connecting to getbootstrap.com on port 80.                                                                        http://getbootstrap.com:80/> GET /
