@@ -22,6 +22,8 @@
     <body class="container"> <!--enclosing the body inside bootstrap constainer class-->
         <br> <!-- new line -->
         <h1>BODY</h1> <!-- heading -->
+        
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
         <br><br>
         <div class="row"> <!-- A Bootstrap Row-->
             <br>ROW<br><br>
@@ -35,17 +37,16 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <br><br><br><br><br>
-                WIDTH 4 COLUMN
-                <!--this is an image of width and height both 100 pixels with a title that appears on hover the mouse over it-->
-                <img src="../images/colorpicker.png" width="100px" height="100px" title="colorpicker"/> 
-                <br><br><br><br><br>
+                <!--this is an image of width and height both 200 pixels with a title that appears on hover the mouse over it-->
+                <img src="../images/colorpicker.png" width="200px" height="200px" title="colorpicker"/> 
             </div>
         </div>
         <br><br><br>
         <div class="row">
-            <a href="https://www.google.co.in"> Google </a> <!-- a link -->
-            ROW
+            <a target="_blank" href="https://www.google.co.in"> Google </a> <!-- a link that opens in a new tab -->
+            ROW <br>Bootstrap Primary Button - this button does not do anything as of now<br>
+            <!--adding danger style to a button using bootstrap-->
+            <button class="btn btn-primary">i do nothing</button>
         </div>
         <br><br><br>
         <div class="row">
@@ -53,5 +54,6 @@
             <div class="col-sm-5">WIDTH 5 COLUMN</div>
             <div class="col-sm-7">WIDTH 7 COLUMN</div>
         </div>
+        <br><br><br>
     </body>
 </html>
