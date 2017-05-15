@@ -30,7 +30,7 @@ This image shows the request and response headers when fetching a script for htt
 
 ![Request Headers in Network Tab](images/headers.png)
 
-HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests.
+HTTP is simple, HTTP messages can be read and understood by humans. This allows easier testing and development. We can use http-console package in node to run simple HTTP requests. Another tool to test http requests is Postman. [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) is available as a Chrome Desktop App in Chrome Web Store.
 
 [Install NodeJS](https://nodejs.org/en/download/). For Ubuntu following commands will work:
 
