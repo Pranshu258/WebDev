@@ -307,4 +307,4 @@ For an exhaustive description of components provided by Bootstrap visit:
 
 For inspiration in web design visit [Awwwards](https://www.awwwards.com/)
 
-<!--[Next: Github Pages](GitHub_Pages.md)-->
+[Next: Github Pages](GitHub_Pages.md)

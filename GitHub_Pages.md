@@ -4,7 +4,15 @@
 Pranshu Gupta
 
 ## Git: A Version Control System
-Git is a version control system used to track changes in files and coordinating work on those files among multiple people. It is built for speed, data integrity, and support for distributed, non-linear workflows. To add a project to git, go to the project folder and e issue the `git init` command. Then, add the files which you want to track with Git `git add fileName`, if you want to add all the files in the project folder use command `git add .`
+Git is a version control system used to track changes in files and coordinating work on those files among multiple people. It is built for speed, data integrity, and support for distributed, non-linear workflows. 
+
+Git is available freely under the GNU General Public License for Windows, Linux and MacOS. See the follwing article to learn how to install Git on your machine: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Ubuntu Linux and Windows 10 with Bash the following commands work:
+
+    $ sudo apt install git
+    $ git config --global user.name "your name"
+    $ git config --global user.email "your email"
+
+To add a project to git, go to the project folder and e issue the `git init` command. Then, add the files which you want to track with Git `git add fileName`, if you want to add all the files in the project folder use command `git add .`
 
     $ cd projectFolder
     $ git init
@@ -20,15 +28,9 @@ A repository can have many branches, which may or may not be later merged with t
     $ git branch newBranchName
     $ git checkout newBranchName
 
-To go to work in the old branch, simply enter `git checkout oldBranchName`. For merging the current branch with another branch, use the following command, you might have resolve conflicts if you make different changes in the same line of code on the two branches. Conflict resolution has to be done manually by inspecting the code.
+To go to work in the old branch, simply enter `git checkout oldBranchName`. For merging the current branch with another branch, use the following command, you might have resolve conflicts if you make different changes in the same line of code on the two branches. Conflict resolution has to be done manually by inspecting the code. Git will show the two versions of the conflicting lines for each file, to resolve the conflict we just have to delete the line which we don't want. After resolving all the conflicts we can merge the branches as usual.
 
     $ git merge currentBranchName otherBranchName
-
-Git is available freely under the GNU General Public License for Windows, Linux and MacOS. See the follwing article to learn how to install Git on your machine: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Ubuntu Linux and Windows 10 with Bash the following commands work:
-
-    $ sudo apt install git
-    $ git config --global user.name "your name"
-    $ git config --global user.email "your email"
 
 [Git CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
 
@@ -44,6 +46,10 @@ We can also use to publish our websites via GitHub. Creating a repository named 
 <iframe width="560" height="315" style="margin-top:2%;margin-bottom:2%;"  src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
 
 [GitHub Pages](https://pages.github.com/)
+
+In order to publish our website on github, we have create a repository named `username.github.io`, username should be your GitHub username. Now on our machine, we have to create an empty folder. In terminal (ubuntu) or in Git Bash (for windows), first enter in the folder which we just created by using the `cd` commamd:
+
+    $ cd foldername
 
 
 
