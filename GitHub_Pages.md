@@ -48,7 +48,7 @@ We can also use to publish our websites via GitHub. Creating a repository named 
 
 <iframe width="560" height="315" style="margin-top:2%;margin-bottom:2%;"  src="https://www.youtube.com/embed/2MsN8gpT6jY" frameborder="0" allowfullscreen></iframe>
 
-[GitHub Pages](https://pages.github.com/)
+[Read this article: GitHub Pages](https://pages.github.com/)
 
 In order to publish our website on github, we have create a repository named `username.github.io`, username should be your GitHub username. Now on our machine, we have to create an empty folder. In terminal (ubuntu) or in Git Bash (for windows), first enter in the folder which we just created by using the `cd` commamd:
 
