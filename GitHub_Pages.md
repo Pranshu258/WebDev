@@ -9,6 +9,9 @@ Git is a version control system used to track changes in files and coordinating 
 Git is available freely under the GNU General Public License for Windows, Linux and MacOS. See the follwing article to learn how to install Git on your machine: [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Ubuntu Linux and Windows 10 with Bash the following commands work:
 
     $ sudo apt install git
+
+After installing Git use the following commands for configuration:
+
     $ git config --global user.name "your name"
     $ git config --global user.email "your email"
 
@@ -51,6 +54,22 @@ In order to publish our website on github, we have create a repository named `us
 
     $ cd foldername
 
+Now, we clone the repository by using the following command (please replace 'username' with your GitHub username in the command):
 
+    $ git clone https://github.com/username/username.github.io
+
+This will create the repository folder inside the folder we created in the previous step. Now enter into this folder (again by using the `cd foldername` command as per the folder name). After that, we create a HTML file named "index.html". In this file write HTML content as per your requirements, you can add CSS, Bootstrap etc. as well. 
+
+Now, for each file that you have for your website, HTML, CSS, images, etc. issue the following command (or you can add all of them to Git in one go by using `git add .` command. Note that the '.' is important):
+
+    $ git add filename
+
+We have added the required files to git, we make our first commit:
+
+    $ git commit -m "enter a short message here, describing the changes you made in the project"
+
+To publish the website online, use the following command:
+
+    $ git push origin master
 
 <!--[Next: JavaScript]()-->
