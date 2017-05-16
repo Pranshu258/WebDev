@@ -72,4 +72,8 @@ To publish the website online, use the following command:
 
     $ git push origin master
 
+The website should be online in a few minutes at username.github.io according to your username. For example, my username is 'Pranshu258' so my website will be up at:
+
+[pranshu258.github.io](https://pranshu258.github.io)
+
 <!--[Next: JavaScript]()-->
