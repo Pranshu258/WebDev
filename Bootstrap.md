@@ -163,3 +163,70 @@ An example for a carousel item with caption will be:
 The left right controls are hyperlinks with class 'carousel-control' and refer to the id of the carousel's outermost div. The 'data-slide' attribute tells which item will the carousel slide to when the user clicks the control.
 
 Here is the example page we discussed in class: [Page with Carousel](https://pranshu258.github.io/WebDev/page/index.html)
+
+One important thing that I want to clarify is that anything we do with Bootstrap can be done without using Bootstrap by writing our own CSS (and JS). For example, the navbar we created is a div with some padding (say 2%) and background-color: gray, with an unordered list of links position on the right, styled such that we see the list items in the same line with no bullets. You can see the bootstrap.css file that we included in our page to see the exact CSS that is defined. For example, the CSS for 'container' class is at line 1584 in 'bootstrap.css' file, it says the following:
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+We have already discussed what padding means (empty space around an element). In the same way, we can understand padding-right and padding-left etc. Similarly for margin, auto means the browser may automatically decide the best margin value for the element.
+
+Immediately after this, we have the following lines:
+ 
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    
+These are called media queries, they are used when we want to style an element differently for different screen sizes. For example, in the above code, the width of a div with container class will be 750 pixels in all devices which have at least 768 pixels wide screen. Similarly, you can understand the next three media queries. If you add other CSS properties like color, border, background-color etc inside the media queries, you can see that those properties will reflect the styling as per the screen size. You can also add styling for multiple classes in the same media query as well. For example, at line 4194 in bootstrap.css you can see:
+
+    @media (min-width: 768px) {
+        .navbar-collapse {
+            width: auto;
+            border-top: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .navbar-collapse.collapse {
+            display: block !important;
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+        }
+    }
+
+In this code, we can see the '!important' flags, this flag is used when we want to override all other CSS on the same element. However, we should not use it unless it is absolutely necessary. 
+The display property has many possible values like 'block', 'inline', 'none' etc. Block is usually the default behavior when things are shown like normal text. Inline is used to show the text inside the element in a single line, for example, if we set the value of CSS display property to inline for a list, the items in the list will appear in the same line (remember the list in navbar). Also, in the navbar, we did not have the bullet points that come with an unordered list, for that we have to CSS property 'list-style' to 'none'.
+
+We discussed that to style an HTML element with id "myID" we will refer to it as "#myID" in CSS. We can also define styles hierarchically, for example, if we want to say that all the paragraphs (recall the <p> tag) that are inside the div with id "myID" in our page should have a padding of 10px, we use the following CSS. Note that this does not affect the <p> items that are outside the div with id "myID". Similarly, this concept can be extended to hierarchical styling with classes (recall that to refer to classes we use '.' in CSS before the class name). 
+
+    #myID p {
+        padding: 10px;
+    }
+
+Now if we do the following, the style will apply only to those paragraphs which are directly inside the div with id "myID". If a paragraph is inside a div which in turn is inside the div with id "myID", then this styling won't apply to that paragraph.
+
+    #myID > p {
+        padding: 10px;
+    }
+
+Bootstrap is just a 7000 lines long CSS file with 2000 lines long JavaScript file to support the CSS for animations etc. You don't need to read the entire file. You can just search for the bootstrap classes you already know and observe how the CSS corresponding to that class is defined. 
+Don't edit the Bootstrap file, if you want to override the style given by bootstrap, create your own CSS file with the style you want and include it in your HTML after the bootstrap CSS. Including your CSS after bootstrap CSS is important otherwise bootstrap will override your CSS, don't use the !important flag, it is not recommended. 
+
+
+[Next: JavaScript Basics](JavaScript.md)
