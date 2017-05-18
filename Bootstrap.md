@@ -164,6 +164,8 @@ The left right controls are hyperlinks with class 'carousel-control' and refer t
 
 Here is the example page we discussed in class: [Page with Carousel](https://pranshu258.github.io/WebDev/page/index.html)
 
+## Writing your own CSS
+
 One important thing that I want to clarify is that anything we do with Bootstrap can be done without using Bootstrap by writing our own CSS (and JS). For example, the navbar we created is a div with some padding (say 2%) and background-color: gray, with an unordered list of links position on the right, styled such that we see the list items in the same line with no bullets. You can see the bootstrap.css file that we included in our page to see the exact CSS that is defined. For example, the CSS for 'container' class is at line 1584 in 'bootstrap.css' file, it says the following:
 
     .container {
