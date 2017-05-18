@@ -76,4 +76,4 @@ The website should be online in a few minutes at username.github.io according to
 
 [pranshu258.github.io](https://pranshu258.github.io)
 
-<!--[Next: JavaScript]()-->
+[Next: Bootstrap](Bootstrap.md)
