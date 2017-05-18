@@ -160,4 +160,6 @@ An example for a carousel item with caption will be:
         </div>
     </div>
 
-The left right controls are hyperlinks with class 'carousel-control' and refer to the id of the carousel's outermost div.
+The left right controls are hyperlinks with class 'carousel-control' and refer to the id of the carousel's outermost div. The 'data-slide' attribute tells which item will the carousel slide to when the user clicks the control.
+
+Here is the example page we discussed in class: [Page with Carousel](https://pranshu258.github.io/WebDev/page/index.html)
