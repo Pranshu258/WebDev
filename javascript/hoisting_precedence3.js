@@ -10,3 +10,11 @@ console.log(typeof myName)
 // That's why this script's output is
 // 2
 // number
+// Equivalent code
+// var myName
+// function myName () {
+// 	console.log ("Pranshu")
+// }
+// myName = 2
+// console.log(myName)
+// console.log(typeof myName)
