@@ -6,7 +6,8 @@ Pranshu Gupta
 NodeJS is a platform built upon Google Chrome's JavaScript engine V8. It can be used to build scalable network applications. It uses an event-driven, asynchronous, non-blocking, I/O based model which makes it suitable to create real time applications. NodeJS comes with NPM, the Node Package Manager, which is the largest ecosystem of open source libraries in the world.
 
 To install NodeJS, go to the following link: https://nodejs.org/en/
-To install from command line in linux simple type: `sudo apt install nodejs`
+
+To install from command line in linux simply type: `sudo apt install nodejs`
 
 ## Creating Your First NodeJS App
 NodeJS comes with in-build HTTP module which can be used to create a server that can accept HTTP requests and send appropriate responses to the client. The following code is a simple example for creating a nodejs server:
@@ -78,7 +79,7 @@ Express helps us to automatically serve these static files, without us explicitl
       "description": "nodeapp",
       "main": "app.js",
       "author": "pranshug",
-      "license": "ISC",
+      "license": "ISC"
     }
 
 Now, to install express in your app use the following command:
