@@ -9,6 +9,7 @@
     "angular": "^1.6.4",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "html-css-sanitizer": "0.0.3",
     "mongoose": "^4.10.2",
     "passport": "^0.3.2"
   }

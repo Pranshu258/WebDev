@@ -1,25 +1,36 @@
 // Include the modules
 var express = require('express')            // express module for handling static files and requests easily
 var mongoose = require('mongoose')          // mongoose is the databse driver for mongodb
-
 var path = require('path')                  // path module helps us provide absolute paths for static files
-
-
 var Student = require('./models/Student')   // the student model that we created in student.js
+
+var bodyParser = require('body-parser')
+
+var sanitize = require('html-css-sanitizer').sanitize
+
 
 var app = express()                         // create a server app using express
 mongoose.connect('mongodb://127.0.0.1:27017');          // connect to the mongodb server
 
 app.use(express.static('public'))           // specify the folder where static files are kept
+app.use(bodyParser.json()) // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })) // support encoded bodies
+
 
 // API routes for different URLs
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/index.html'))           // serve the index.html file when user hits the root URL
 })
 // API route to create a new student
-app.get('/createStudent', function (req, res) {
-    var sname = req.query.name              // get the value of name from the query string the request URL
-    var sage = req.query.age                // get the value of age from the query string the request URL
+app.post('/createStudent', function (req, res) {
+    var sname = req.body.name 
+    console.log(sname)
+    sname = sanitize(sname)
+    console.log(sname)           // get the value of name from the query string the request URL
+    var sage = req.body.age    
+    if (!sname || !sage) {
+        res.end("All fields are mandatory")
+    }             // get the value of age from the query string the request URL
     var std = new Student({                 // create a new student object using the constructor from Student module
         name: sname,
         age: sage
@@ -30,10 +41,12 @@ app.get('/createStudent', function (req, res) {
             res.end(err)
         } else {                            // send appropriate response to the user if success
             console.log("student saved successfully!! ID: " + std.id)
-            res.end("student saved successfully!! ID: " + std.id)
+            res.redirect('/')
         }
     })
 })
+
+
 // API route to get all students
 app.get('/getStudents', function (req, res) {
     res.setHeader('Content-Type', 'application/json')   // set the response header that tells the format of response here - JSON

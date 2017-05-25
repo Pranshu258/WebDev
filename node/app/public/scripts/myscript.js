@@ -18,4 +18,19 @@ $(document).ready(function () {
         html += "</table>"
         $("#stdlist").html(html)
     })
+
+    $("form[name='createstd']").validate({
+        rules: {
+            name: "required",
+            age: "required"
+        },
+        messages: {
+            name: "Please enter the name",
+            age: "Please enter the age"
+        },
+        submitHandler: function(form) {
+            form.submit()
+        }
+    })
+
 })
