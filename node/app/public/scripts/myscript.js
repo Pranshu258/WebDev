@@ -1,14 +1,21 @@
-var settings = {
-    "url": "http://127.0.0.1:8000/getStudents",
-    "method": "GET"
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response)
-    html = "<ul>"
-    for (var i = 0; i < response.length; i++) {
-        html += "<li>" + response[i]._id + "</li>" 
+$(document).ready(function () {
+    var settings = {
+        "url": "http://127.0.0.1:8000/getStudents",
+        "method": "GET"
     }
-    html += "</ul>"
-    $("#stdlist").html(html)
+
+    $.ajax(settings).done(function (response) {
+        console.log(response)
+        html = "<table class='table table-hover'>"
+        html+= "<tr class='active'><th>Name</th><th>Age</th><th>ID</th></tr>"
+        for (var i = 0; i < response.length; i++) {
+            html += "<tr>"
+            html += "<td>" + response[i].name + "</td>"
+            html += "<td>" + response[i].age + "</td>"
+            html += "<td>" + response[i]._id + "</td>"
+            html += "</tr>"
+        }
+        html += "</table>"
+        $("#stdlist").html(html)
+    })
 })

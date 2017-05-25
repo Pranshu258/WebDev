@@ -4,6 +4,7 @@
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
         <script src="scripts/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="scripts/angular.min.js"></script>
         <script src="scripts/myscript.js"></script>
     </head>
     <body>
@@ -27,8 +28,55 @@
 
         <div class="container">
             <div class="row">
-                <h3>STUDENTS</h3>
-                <div id="stdlist"></div>
+                <div class="col-sm-7">
+                    <h3>ALL STUDENTS</h3>
+                    <div id="stdlist"></div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <h3>ADD NEW STUDENT</h3>
+                        <form action="/createStudent" method="POST">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="namefield">Name</span>
+                                    <input type="text" class="form-control" placeholder="Enter the Name of the Student" name="name" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="agefield">Age</span>
+                                    <input type="number" class="form-control" placeholder="Enter the Age of the Student" name="age" value="">
+                                </div>
+                            </div>
+                            <button type="submit pull-right" class="btn">Create Student</button>
+                        </form>
+
+                        <h3>UPDATE STUDENT</h3>
+                        <form action="/updateStudent" method="GET">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="idfield">ID</span>
+                                    <input type="text" class="form-control" placeholder="Enter the ID of the Student" name="id" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="namefield">New Name</span>
+                                    <input type="text" class="form-control" placeholder="Enter the New Name of the Student" name="newname" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="agefield">New Age</span>
+                                    <input type="number" class="form-control" placeholder="Enter the New Age of the Student" name="newage" value="">
+                                </div>
+                            </div>
+                            <button type="submit pull-right" class="btn btn-success">Update Student</button>
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </div>
 
