@@ -1,7 +1,9 @@
 // Include the modules
 var express = require('express')            // express module for handling static files and requests easily
 var mongoose = require('mongoose')          // mongoose is the databse driver for mongodb
+
 var path = require('path')                  // path module helps us provide absolute paths for static files
+
 
 var Student = require('./models/Student')   // the student model that we created in student.js
 
@@ -28,7 +30,7 @@ app.get('/createStudent', function (req, res) {
             res.end(err)
         } else {                            // send appropriate response to the user if success
             console.log("student saved successfully!! ID: " + std.id)
-            res.redirect("student saved successfully!! ID: " + std.id)
+            res.end("student saved successfully!! ID: " + std.id)
         }
     })
 })
