@@ -8,9 +8,13 @@
   "dependencies": {
     "angular": "^1.6.4",
     "body-parser": "^1.17.2",
+    "connect-mongostore": "^0.1.4",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "express-sessions": "^1.0.6",
     "html-css-sanitizer": "0.0.3",
     "mongoose": "^4.10.2",
-    "passport": "^0.3.2"
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }
