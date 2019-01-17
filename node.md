@@ -1,4 +1,4 @@
-[Previous: More on Bootstrap](Bootstrap.md)
+[Previous: JavaScript](JavaScript.md)
 
 # Introduction to NodeJS
 Pranshu Gupta

@@ -13,5 +13,8 @@ An introduction to publishing pages via GitHub using Git as the version control 
 ## [Unit 4: More on Bootstrap](Bootstrap.md)
 Adding responsive navigation bar, dropdown menus, carousel and modals to a web page using bootstrap.
 
-## [Unit 5: NodeJS](node.md)
+## [Unit 5: JavaScript](JavaScript.md)
+Learning JavaScript
+
+## [Unit 6: NodeJS](node.md)
 A gentle introduction to NodeJS
